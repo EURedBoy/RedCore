@@ -1,0 +1,142 @@
+#▄████████    ▄████████ ████████▄   ▄████████  ▄██████▄     ▄████████    ▄████████
+#  ███    ███   ███    ███ ███   ▀███ ███    ███ ███    ███   ███    ███   ███    ███
+#  ███    ███   ███    █▀  ███    ███ ███    █▀  ███    ███   ███    ███   ███    █▀
+# ▄███▄▄▄▄██▀  ▄███▄▄▄     ███    ███ ███        ███    ███  ▄███▄▄▄▄██▀  ▄███▄▄▄
+#▀▀███▀▀▀▀▀   ▀▀███▀▀▀     ███    ███ ███        ███    ███ ▀▀███▀▀▀▀▀   ▀▀███▀▀▀
+#▀███████████   ███    █▄  ███    ███ ███    █▄  ███    ███ ▀███████████   ███    █▄
+#  ███    ███   ███    ███ ███   ▄███ ███    ███ ███    ███   ███    ███   ███    ███
+#  ███    ███   ██████████ ████████▀  ████████▀   ▀██████▀    ███    ███   ██████████
+#  ███    ███                                                 ███    ███
+#
+#
+prefix: "&6&lR&c&lC ➽&r"
+reload-message: "%prefix% &bPlugin riavviato con successo"
+#
+set-spawn: "%prefix% &bSpawn &aImpostato"
+spawn-message: "%prefix% &bSei stato teletrasportato allo &aspawn"
+spawn-error: "%prefix% &bNon e' stato &cimpostato &bnessuno spawn"
+#
+#
+spawn:
+  x:
+  y:
+  z:
+  yaw:
+  pitch:
+  world:
+#
+#
+first-join-message: "&bBenvenuto &a%player% &benl &c&lRedCore"
+join-message: "&8[&a+&8] &a%player%"
+quit-message: "&8[&c-&8] &c%player%"
+joinplayer-message:
+  - ""
+  - "%prefix% &bBentornato &a%player%&b nel &cRed&6Core"
+  - ""
+#
+#
+#Warps
+set-warp: "%prefix% &bHai &aimpostato &bil warp"
+warp: "%prefix% &bSei stato teletrasportato al &awarp"
+del-warp: "%prefix% &bHai appena &celiminato &bil warp"
+warp-error: "%prefix% &bNon esiste &cnessun &bwarp con quel nome"
+#
+#
+#Display Item
+no-permission: "%prefix% &bNon hai il &cpermesso &bper farlo"
+no-item-inhand: "%prefix% &bNon puoi &cmostrare &bl'aria"
+display-message: "%prefix% &bHai &amostrato &bil tuo item"
+displayitem-gui: "&aSta mostrando:"
+chat-display: '&a%player% &bsta mostrando: &6| &r%item% &a(%amount%) &6|'
+#
+#
+#Home
+set-home: "%prefix% &bCasa &aImpostata"
+tp-home: "%prefix% &bSei stato &ateletrasportato &balla tua home"
+tpother-home: "%prefix% &bSei stato &ateletrasportato &balla casa di un'altro player"
+del-home: "%prefix% &bHai eliminato con &asuccesso &bquesta casa!"
+home-error: "%prefix% &bNon esiste &cnessuna &bcasa con quel nome!"
+#
+#
+#Fly
+fly-disable: "%prefix% &bHai &cdisattivato &bla fly"
+fly-enable: "%prefix% &bHai &aattivato &bla fly"
+#
+#
+#Staff Fly
+reset-fly-location: true
+#
+#
+#Gamemode
+change-gamemode: "%prefix% &bHai cambiato la tua modalita' in &a%gamemode%"
+#
+#
+#Teleport
+teleport-message: "%prefix% &bSei stato teletrasportato da &e(&aOnline&e) &a%teleported%"
+otherteleport-message: "%prefix% &bHai teletrasportato &e(&aOnline&e) &a%teleported% &bda &e(&aOnline&e) &a%toteleport"
+tphere-message: "%prefix% &bHai teletrasportato &e(&aOnline&e) &a%teleported% alla tua posizione"
+#
+#Tpa
+tpa-sendmessage: "%prefix% &bHai inviato il tpa a &e(&aOnline&e) &9%tpa-target%"
+tpa-comingmessage: "%prefix% &e(&aOnline&e) &9%tpa-sender% &bti ha inviato il tpa scadra' fra &a30 &bsecondi"
+tpa-teleport: "%prefix% &bSei stato teletrasportato da %player%"
+tpa-deny: "%prefix% &bHai &ccancellato &ala richiesta di teletrasporto"
+tpa-null: "%prefix% &bHai gia' una &arichiesta &bdi tpa in &ccorso"
+none-tpa: "%prefix% &bNon hai nessun tpa &aAttivo"
+tpa-here-sendmessage: "%prefix% &bHai inviato il tpa-here a &e(&aOnline&e) &9%tpa-target%"
+tpa-here-comingmessage: "%prefix% &e(&aOnline&e) &9%tpa-sender% &bha chiesto di teletrasportarsi da lui il tpa scadra' fra &a30 &bsecondi"
+tpa-delay: 30
+#
+#Command Spy
+commandspy-message: "&e(&9%player%&e) &bha eseguito il comando &e➽ &a%comando%"
+commandspy-on: "%prefix% &bHai &aattivato &b la commandspy"
+commandspy-off: "%prefix% &bHai &cdisattivato &b la commandspy"
+#
+#Msg
+msg-sender-message: "&8(%player%) &c&lPRIVATO ➽ &7%message%"
+msg-coming-message: "&8(%player%➽) &c&lPRIVATO  &7%message%"
+#
+#AutoBroadCast
+message-toggle-on: "%prefix% &bOra &cnon &briceverai &bi broadcast"
+message-toggle-off: "%prefix% &bOra &ariceverai &bi broadcast"
+#
+header: ""
+foother: ""
+#
+broadcast-message:
+  - "%prefix% &bPrimo messaggio &abroadcast"
+  - "%prefix% &bSecondo messaggio &abroadcast"
+  - "%prefix% &bTerzo messaggio &abroadcast"
+autobroadcast-delay: 60     #Impostalo in secondi
+#
+#Freeze
+freeze-player: "%prefix% &bHai &afreezato &9%player%"
+freeze-message: "%prefix% &bSei stato freezato"
+unfreeze-player: "%prefix% &bHai &aunfreezato &9%player%"
+unfreeze-message: "%prefix% &bSei stato &aunfreezato"
+#
+#Announce
+announce-prefix: "&6&lAnnuncio &e&l➽"
+#
+#Mentions
+mention-tag: "@"
+mention-color: "&b"
+mentions-message-bool: true #Server per abilitare il messaggio non per abilitare le menzioni
+mention-message: "&3%player% &bSei stato &amenzionato"
+#
+#Back
+back-message: "%prefix% &bSei stato &ariportato &balla posizione &aprecedente"
+#
+#DeathMessage
+explosion-message: "&b●&9●&b● &a%player &3ha deciso di passare una notte a napoli"
+void-message: "&b●&9●&b● &a%player &3ha sperimentato il vuoto cosmico"
+#
+#Jail Message
+jail-message: "%prefix% &bhai incarcerato &a%player% &bper &a%tempo%"
+injail-message: "%prefix% &bSei stato incarcerato da &a%player% &bper &a%tempo%"
+already-jail: "%prefix% &bQuesto player è gia in carcere per &a%tempo%"
+jail:
+  x:
+  y:
+  z:
+  world:

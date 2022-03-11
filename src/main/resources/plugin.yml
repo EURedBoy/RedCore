@@ -1,0 +1,101 @@
+name: RedCore
+version: '${project.version}'
+main: me.red.redcore
+api-version: 1.17
+authors: [ Red ]
+description: Yeah that's my core
+commands:
+  setspawn:
+    description: Set World SpawnPoint
+  spawn:
+    description: Teleport to Spawn
+  sethome:
+    description: Set your Home
+  home:
+    description: Go Home
+  displayitem:
+    description: Display your handitem
+  viewitem:
+    description: View other player display item
+  fly:
+    description: You can fly
+  flystaff:
+    description: Fly for staff
+    aliases:
+      - sf
+  delhome:
+    description: Delete homes
+  setwarp:
+    description: Set a warp
+  warp:
+    description: Go to a warp
+  delwarp:
+    description: Delete your warp
+  tp:
+    description: Teleport
+  tphere:
+    description: Teleport a player to your position
+  tpa:
+    description: Teleport Request
+  tpaccept:
+    description: Teleport Accept
+    aliases:
+      - tpayes
+  tpacancel:
+    description: Teleport Cancel
+    aliases:
+      - tpano
+      - tpadeny
+  tpahere:
+    description: Teleport to you
+  commandspy:
+    description: Toggle commandspy
+    aliases:
+      - spy
+  gms:
+    description: Gamemode Survival
+  gmc:
+    description: Gamemode Creative
+  gma:
+    description: Gamemode Adventure
+  gmsp:
+    description: Gamemode Spectator
+  gamemode:
+    description: Change Gamemode
+    aliases:
+      - gm
+  msg:
+    description: Message other Player
+  freeze:
+    description: Freeze player
+  announce:
+    description: Make an announce
+    aliases:
+      - annuncio
+      - broadcast
+  redcore:
+    description: Main command
+  uuid:
+    description: Get uuid
+  resoucepack:
+    description: Download Resourcepack
+    aliases:
+      - rc
+  reply:
+    description: Reply msg
+    aliases:
+      - r
+  soldi:
+    description: Soldi
+  soldicompatti:
+    description: Soldi Compatti
+  checkpoint:
+    description: CheckPoint
+  back:
+    description: Back to te previously position
+  jail:
+    description: Jail
+  setjail:
+    description: Set jail
+  unjail:
+    description: Remove from jail
