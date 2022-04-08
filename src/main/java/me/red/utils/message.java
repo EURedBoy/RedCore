@@ -11,4 +11,8 @@ public class message {
                 .replaceAll("%prefix%",plugin.getConfig().getString("prefix").replaceAll("&","§")));
         return message;
     }
+
+    public static String messageColor(String message){
+        return message.replaceAll("&","§");
+    }
 }

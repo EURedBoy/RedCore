@@ -6,21 +6,23 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
 import java.util.List;
+import java.util.Set;
 
 public class BroadCastEvent {
 
     redcore plugin = redcore.getPlugin(redcore.class);
     int i = 0;
-    List<String> messaggi;
+    Set<String> messaggi;
     public void BroadCast(){
             Bukkit.getScheduler().runTaskTimer(plugin, new Runnable() {
                 @Override
                 public void run() {
                     if (Bukkit.getOnlinePlayers().size() != 0){
+                        messaggi = plugin.getConfig().getConfigurationSection("broadcast-message").getKeys(false);
                         for(Player p : Bukkit.getServer().getOnlinePlayers()){
-                            messaggi = plugin.getConfig().getStringList("broadcast-message");
                             p.sendMessage(plugin.getConfig().getString("header").replaceAll("&","§"));
-                            p.sendMessage(messaggi.get(i).replaceAll("&", "§").replaceAll("%prefix%",plugin.getConfig().getString("prefix").replaceAll("&","§")));
+                            for (String msg : plugin.getConfig().getStringList("broadcast-message." + i))
+                                p.sendMessage(msg.replaceAll("&","§"));
                             p.sendMessage(plugin.getConfig().getString("foother").replaceAll("&","§"));
                         }
                         if (i < messaggi.size()-1){

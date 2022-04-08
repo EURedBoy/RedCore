@@ -17,7 +17,7 @@ public class fly implements CommandExecutor {
         }else{
             Player p = (Player)sender;
             if (p.hasPermission("redcore.fly")){
-                if (args.length > 0 && Bukkit.getPlayer(args[0]) != null){
+                if (args.length > 0 && Bukkit.getPlayer(args[0]) != null && p.hasPermission("redcore.fly.other")){
                     Player e = Bukkit.getPlayer(args[0]);
                     if (e.getAllowFlight()){
                         e.sendMessage(message.sendMessage(plugin.getConfig().getString("fly-disable"),p));

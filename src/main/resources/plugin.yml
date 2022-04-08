@@ -3,6 +3,7 @@ version: '${project.version}'
 main: me.red.redcore
 api-version: 1.17
 authors: [ Red ]
+softdepend: [PlaceholderAPI]
 description: Yeah that's my core
 commands:
   setspawn:
@@ -93,9 +94,21 @@ commands:
     description: CheckPoint
   back:
     description: Back to te previously position
-  jail:
-    description: Jail
-  setjail:
-    description: Set jail
-  unjail:
-    description: Remove from jail
+  iname:
+    description: Rename Item
+  ilore:
+    description: SetLore
+  anvil:
+    description: Open anvil
+  workbench:
+    description: Open workbench
+  enderchest:
+    description: Open enderchest
+  hat:
+    description: wear a block
+  nick:
+    description: Change nick
+  rules:
+    description: Rules
+    aliases:
+      - regole

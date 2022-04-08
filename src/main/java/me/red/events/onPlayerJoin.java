@@ -1,6 +1,5 @@
 package me.red.events;
 
-import me.red.bossItem.customItemBlockPlace;
 import me.red.redcore;
 import me.red.utils.message;
 import org.bukkit.Bukkit;
@@ -13,7 +12,6 @@ public class onPlayerJoin implements Listener {
     redcore plugin = redcore.getPlugin(redcore.class);
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
-        customItemBlockPlace.ability.put(e.getPlayer(),true);
         e.setJoinMessage(message.sendMessage(plugin.getConfig().getString("join-message"),e.getPlayer()));
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
             for (String string : plugin.getConfig().getStringList("joinplayer-message"))

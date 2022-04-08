@@ -5,15 +5,13 @@ import me.red.BroadCast.BroadCastEvent;
 import me.red.Economy.compactmoney;
 import me.red.Economy.money;
 import me.red.Parkour.*;
-import me.red.bossItem.customBossItem;
-import me.red.bossItem.customItemBlockPlace;
 import me.red.cmds.*;
 import me.red.events.*;
 import me.red.tabcompleter.homeTabCompleter;
 import me.red.tabcompleter.warpListTabCompleter;
 import me.red.utils.User;
 import me.red.utils.configmanager;
-import me.red.utils.jailUtils;
+import me.red.utils.nickPlaceHolder;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -65,9 +63,14 @@ public final class redcore extends JavaPlugin {
         getServer().getPluginCommand("soldicompatti").setExecutor(new compactmoney());
         getServer().getPluginCommand("checkpoint").setExecutor(new getParkourCheckPoint());
         getServer().getPluginCommand("back").setExecutor(new back());
-        getServer().getPluginCommand("jail").setExecutor(new jailPlayer());
-        getServer().getPluginCommand("setjail").setExecutor(new setJail());
-        getServer().getPluginCommand("unjail").setExecutor(new unjailPlayer());
+        getServer().getPluginCommand("iname").setExecutor(new iname());
+        getServer().getPluginCommand("ilore").setExecutor(new ilore());
+        getServer().getPluginCommand("anvil").setExecutor(new anvil());
+        getServer().getPluginCommand("workbench").setExecutor(new workbench());
+        getServer().getPluginCommand("enderchest").setExecutor(new enderchest());
+        getServer().getPluginCommand("hat").setExecutor(new hat());
+        getServer().getPluginCommand("nick").setExecutor(new nickCommand());
+        getServer().getPluginCommand("rules").setExecutor(new rulesCommand());
         getServer().getPluginManager().registerEvents(new backEvent(),this);
         getServer().getPluginManager().registerEvents(new dropItem(),this);
         getServer().getPluginManager().registerEvents(new blockCollision(),this);
@@ -75,7 +78,6 @@ public final class redcore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new blockParkourMove(),this);
         getServer().getPluginManager().registerEvents(new parkourJoinWorld(),this);
         getServer().getPluginManager().registerEvents(new triggerCheckPointEvent(),this);
-        getServer().getPluginManager().registerEvents(new customItemBlockPlace(), this);
         getServer().getPluginManager().registerEvents(new mentions(),this);
         getServer().getPluginManager().registerEvents(new playerMoveEvent(),this);
         getServer().getPluginManager().registerEvents(new commandspy(),this);
@@ -86,9 +88,9 @@ public final class redcore extends JavaPlugin {
         getLogger().info("§bRedCore abilitato §acon Successo");
         getLogger().info("§a| §3Creato da: §eJwZy       §a|");
         getLogger().info("§a| §3Per: §9§lM§b§lK§r               §a|");
-        new customBossItem().BossEffect();
         new BroadCastEvent().BroadCast();
         User.setSpawn();
+        new nickPlaceHolder(this).register();
         try {
             config = YamlDocument.create(new File(getDataFolder(), "config.yml"), getResource("config.yml"));
         } catch (IOException e) {

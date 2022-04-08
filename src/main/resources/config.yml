@@ -131,6 +131,16 @@ back-message: "%prefix% &bSei stato &ariportato &balla posizione &aprecedente"
 explosion-message: "&b●&9●&b● &a%player &3ha deciso di passare una notte a napoli"
 void-message: "&b●&9●&b● &a%player &3ha sperimentato il vuoto cosmico"
 #
+#Rules
+rules:
+  - "&b1&8) &7Non insultare, flammare, usare un linguaggio eccessivamente scurrile"
+  - "&b2&8) &7Grieffare è &cvietato"
+  - "&b3&8) &7Non usare hack, per info specifiche chiedi ad uno staff"
+  - "&b4&8) &7Non instasare la chat"
+  - "&b5&8) &7Non pubblicizzare qualunque cosa esterna al server"
+  - "&b&6&8) &7Non duplicare, abusare di bug"
+  - "&b7&8) &7Non truffare altri player"
+#
 #Jail Message
 jail-message: "%prefix% &bhai incarcerato &a%player% &bper &a%tempo%"
 injail-message: "%prefix% &bSei stato incarcerato da &a%player% &bper &a%tempo%"
